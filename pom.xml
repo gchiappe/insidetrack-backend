@@ -26,12 +26,12 @@
 			<artifactId>graphql-spring-boot-starter</artifactId>
 			<version>12.0.0</version>
 		</dependency>
-		<dependency>
-			<groupId>com.graphql-java-kickstart</groupId>
-			<artifactId>graphql-spring-boot-starter-test</artifactId>
-			<version>12.0.0</version>
-			<scope>test</scope>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.graphql-java-kickstart</groupId>-->
+<!--			<artifactId>graphql-spring-boot-starter-test</artifactId>-->
+<!--			<version>12.0.0</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 		<!-- Schema Library -->
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
@@ -77,6 +77,10 @@
 			<groupId>com.arangodb</groupId>
 			<artifactId>arangodb-spring-data</artifactId>
 			<version>3.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
 		</dependency>
 
 	</dependencies>
