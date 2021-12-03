@@ -20,5 +20,5 @@ CMD java -jar -Dserver.port=$SPRINGBOOT_PORT \
     -Darangodb.port=$ARANGO_PORT \
     -Darangodb.user=$ARANGO_USER \
     -Darangodb.password=$ARANGO_PW \
-    -Darangodb.database=$ARANGO_DATABASE
+    -Darangodb.database=$ARANGO_DATABASE \
     /app/app.jar
