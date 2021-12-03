@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: InsideTrackTestGChiappe
+
+server:
+  port: 9000
+
+info:
+  app:
+    name: InsideTrack's Test for Giancarlo Chiappe
+    version: @version@
+    api-type: GraphQL
+    java-home: ${JAVA_HOME:'Not Defined.'}
+
+altair:
+  enabled: true
+  cdn:
+    enabled: true
+  static:
+    base-path: /
+  endpoint:
+    graphql: /graphql
+
+graphql:
+  tools:
+    schema-location-pattern: 'schema/*.graphqls'
+#    initial-post-request-script: post-request.graphql

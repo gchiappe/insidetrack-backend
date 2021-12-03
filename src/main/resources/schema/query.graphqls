@@ -1,6 +1,10 @@
 type Query {
     invoices: [Invoice]
-    invoice(invoiceNumber: String): Invoice
+#    invoice(invoiceNumber: String): Invoice
+#    invoicesByCustomer(customerId: String): [Invoice]
+#    invoicesByDistributor(distributorId: String): [Invoice]
+#    invoicesByCustomerLocation(address: String): [Invoice]
+#    invoicesByProduct(productCode: String): [Invoice]
 }
 
 type Invoice {
@@ -17,6 +21,7 @@ type InvoiceDetail {
     weight: Float
     measureUnit: String
     unitPrice: Float
+    product: Product
 }
 
 type Customer {
