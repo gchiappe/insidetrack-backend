@@ -1,10 +1,11 @@
+scalar Date
+
 type Query {
     invoices: [Invoice]
-#    invoice(invoiceNumber: String): Invoice
-#    invoicesByCustomer(customerId: String): [Invoice]
-#    invoicesByDistributor(distributorId: String): [Invoice]
-#    invoicesByCustomerLocation(address: String): [Invoice]
-#    invoicesByProduct(productCode: String): [Invoice]
+    invoice(invoiceNumber: String): Invoice
+    invoicesByDistributor(distributorName: String): [Invoice]
+    invoicesByCustomerLocation(customerAddress: String): [Invoice]
+    invoicesByProduct(productCode: String): [Invoice]
 }
 
 type Invoice {
@@ -12,6 +13,7 @@ type Invoice {
     purchaseDate: String
     details: [InvoiceDetail]
     totalPurchases: Int
+    totalPayment: Float
     customer: Customer
     distributor: Distributor
 }
@@ -25,28 +27,22 @@ type InvoiceDetail {
 }
 
 type Customer {
-    id: String
     name: String
     address: String
-    contact: String
 }
 
 type Distributor {
-    id: String
     name: String
     address: String
-    contact: String
 }
 
 type Product {
     code: String
-    description: String
+    name: String
     manufacturer: Manufacturer
 }
 
 type Manufacturer {
-    id: String
     name: String
     address: String
-    contact: String
 }

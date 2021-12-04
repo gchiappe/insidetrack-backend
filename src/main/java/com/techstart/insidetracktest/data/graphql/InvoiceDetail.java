@@ -1,5 +1,7 @@
 package com.techstart.insidetracktest.data.graphql;
 
+import com.arangodb.springframework.annotation.Field;
+
 /**
  * GraphQL Object
  *
@@ -13,10 +15,11 @@ package com.techstart.insidetracktest.data.graphql;
 
 public class InvoiceDetail {
     private Integer quantity;
-    private Double weight;
-    private String measureUnit;
-    private Double unitPrice;
+    private @Field("purchased_weight") Double weight;
+    private @Field("unit_of_measure") String measureUnit;
+    private @Field("unit_price") Double unitPrice;
     private Product product;
+    
 
     public Integer getQuantity() {
         return quantity;
@@ -61,5 +64,16 @@ public class InvoiceDetail {
     public InvoiceDetail setProduct(Product product) {
         this.product = product;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "InvoiceDetail{" +
+                "quantity=" + quantity +
+                ", weight=" + weight +
+                ", measureUnit='" + measureUnit + '\'' +
+                ", unitPrice=" + unitPrice +
+                ", product=" + product +
+                '}';
     }
 }

@@ -13,13 +13,24 @@ type Invoice {
 }
  */
 
+import com.arangodb.springframework.annotation.Document;
+import com.arangodb.springframework.annotation.Field;
+import org.springframework.data.annotation.Id;
+
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.List;
+
+@Document("invoices")
 public class Invoice {
-    private String number;
-    private String purchaseDate;
-    private InvoiceDetail[] details;
-    private Integer totalPurchases;
-    private Customer customer;
-    private Distributor distributor;
+    private @Id String number;
+
+    private @Field("purchase_date") LocalDate purchaseDate;
+    private @Field("detail") List<InvoiceDetail> details;
+    private @Field("total_purchases") Integer totalPurchases;
+    private @Field("total_payment") Integer totalPayment;
+    private @Field("customer") Customer customer;
+    private @Field("distributor") Distributor distributor;
 
     public String getNumber() {
         return number;
@@ -30,20 +41,20 @@ public class Invoice {
         return this;
     }
 
-    public String getPurchaseDate() {
+    public LocalDate getPurchaseDate() {
         return purchaseDate;
     }
 
-    public Invoice setPurchaseDate(String purchaseDate) {
+    public Invoice setPurchaseDate(LocalDate purchaseDate) {
         this.purchaseDate = purchaseDate;
         return this;
     }
 
-    public InvoiceDetail[] getDetails() {
+    public List<InvoiceDetail> getDetails() {
         return details;
     }
 
-    public Invoice setDetails(InvoiceDetail[] details) {
+    public Invoice setDetails(List<InvoiceDetail> details) {
         this.details = details;
         return this;
     }
@@ -73,5 +84,27 @@ public class Invoice {
     public Invoice setDistributor(Distributor distributor) {
         this.distributor = distributor;
         return this;
+    }
+
+    public Integer getTotalPayment() {
+        return totalPayment;
+    }
+
+    public Invoice setTotalPayment(Integer totalPayment) {
+        this.totalPayment = totalPayment;
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "number='" + number + '\'' +
+                ", purchaseDate='" + purchaseDate + '\'' +
+                ", details=" + details +
+                ", totalPurchases=" + totalPurchases +
+                ", totalPayment=" + totalPayment +
+                ", customer=" + customer +
+                ", distributor=" + distributor +
+                '}';
     }
 }

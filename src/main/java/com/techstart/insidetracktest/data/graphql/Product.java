@@ -10,7 +10,7 @@ package com.techstart.insidetracktest.data.graphql;
 
 public class Product {
     private String code;
-    private String description;
+    private String name;
     private Manufacturer manufacturer;
 
     public String getCode() {
@@ -22,12 +22,12 @@ public class Product {
         return this;
     }
 
-    public String getDescription() {
-        return description;
+    public String getName() {
+        return name;
     }
 
-    public Product setDescription(String description) {
-        this.description = description;
+    public Product setName(String name) {
+        this.name = name;
         return this;
     }
 
@@ -38,5 +38,14 @@ public class Product {
     public Product setManufacturer(Manufacturer manufacturer) {
         this.manufacturer = manufacturer;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", manufacturer=" + manufacturer +
+                '}';
     }
 }

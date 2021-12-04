@@ -20,24 +20,36 @@
 	</properties>
 
 	<dependencies>
+
 		<!-- GraphQL -->
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-spring-boot-starter</artifactId>
 			<version>12.0.0</version>
 		</dependency>
+
+		<!-- Test should stay disabled until they are implemented, otherwise an error is thrown at build time -->
 <!--		<dependency>-->
 <!--			<groupId>com.graphql-java-kickstart</groupId>-->
 <!--			<artifactId>graphql-spring-boot-starter-test</artifactId>-->
 <!--			<version>12.0.0</version>-->
 <!--			<scope>test</scope>-->
 <!--		</dependency>-->
+
 		<!-- Schema Library -->
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-java-tools</artifactId>
 			<version>12.0.1</version>
 		</dependency>
+
+		<!-- Extended Scalars for handling complex types such as Date -->
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-extended-scalars</artifactId>
+			<version>17.0</version>
+		</dependency>
+
 		<!-- Altair https://mvnrepository.com/artifact/com.graphql-java-kickstart/altair-spring-boot-starter -->
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
@@ -51,7 +63,6 @@
 			<artifactId>guava</artifactId>
 			<version>26.0-jre</version>
 		</dependency>
-
 
 		<!-- SpringBoot -->
 		<dependency>
@@ -77,10 +88,6 @@
 			<groupId>com.arangodb</groupId>
 			<artifactId>arangodb-spring-data</artifactId>
 			<version>3.3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
 		</dependency>
 
 	</dependencies>

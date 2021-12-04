@@ -1,5 +1,7 @@
 package com.techstart.insidetracktest.data.graphql;
 
+import com.arangodb.springframework.annotation.Field;
+
 /**
  * type Manufacturer {
  *     id: String
@@ -10,19 +12,8 @@ package com.techstart.insidetracktest.data.graphql;
  */
 
 public class Manufacturer {
-    private String id;
     private String name;
-    private String address;
-    private String contact;
-
-    public String getId() {
-        return id;
-    }
-
-    public Manufacturer setId(String id) {
-        this.id = id;
-        return this;
-    }
+    private @Field("addr") String address;
 
     public String getName() {
         return name;
@@ -42,12 +33,11 @@ public class Manufacturer {
         return this;
     }
 
-    public String getContact() {
-        return contact;
-    }
-
-    public Manufacturer setContact(String contact) {
-        this.contact = contact;
-        return this;
+    @Override
+    public String toString() {
+        return "Manufacturer{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }
