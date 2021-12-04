@@ -1,7 +1,6 @@
 package com.techstart.insidetracktest.graphql;
 
 import com.techstart.insidetracktest.data.arangodb.InvoiceRepository;
-import com.techstart.insidetracktest.data.graphql.Customer;
 import com.techstart.insidetracktest.data.graphql.Invoice;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.stereotype.Component;
@@ -18,10 +17,6 @@ public class ITTQueryResolver implements GraphQLQueryResolver {
     }
 
     public Iterable<Invoice> invoices() {
-//        Iterable<Invoice> invoicesIterable = invoiceRepository.findAll();
-//        for (Invoice invoice : invoicesIterable) {
-//            System.out.println(invoice.toString());
-//        }
         return invoiceRepository.findAll();
     }
 
