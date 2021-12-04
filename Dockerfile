@@ -16,7 +16,7 @@ ENV SPRINGBOOT_PORT=8080
 EXPOSE $SPRINGBOOT_PORT
 # COPY target/insidetrack-test*.jar /app/app.jar
 CMD java -jar \
-#    -Dserver.port=$SPRINGBOOT_PORT \
+    -Dserver.port=$SPRINGBOOT_PORT \
 #    -Darangodb.hosts=$ARANGO_HOST \
 #    -Darangodb.port=$ARANGO_PORT \
 #    -Darangodb.user=$ARANGO_USER \
