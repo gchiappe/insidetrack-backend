@@ -1,10 +1,15 @@
 scalar Date
 
 type Query {
+    """Get all invoices from database"""
     invoices: [Invoice]
+    """Get an invoice by invoice number"""
     invoice(invoiceNumber: String): Invoice
+    """Get all invoices by distributor name"""
     invoicesByDistributor(distributorName: String): [Invoice]
+    """Get all invoices by customer location"""
     invoicesByCustomerLocation(customerAddress: String): [Invoice]
+    """Get all invoices by product code"""
     invoicesByProduct(productCode: String): [Invoice]
 }
 
