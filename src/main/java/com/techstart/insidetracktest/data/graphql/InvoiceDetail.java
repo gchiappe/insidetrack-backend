@@ -18,6 +18,7 @@ public class InvoiceDetail {
     private @Field("purchased_weight") Double weight;
     private @Field("unit_of_measure") String measureUnit;
     private @Field("unit_price") Double unitPrice;
+    private @Field("total_price") Double total;
     private Product product;
     
 
@@ -66,6 +67,15 @@ public class InvoiceDetail {
         return this;
     }
 
+    public Double getTotal() {
+        return total;
+    }
+
+    public InvoiceDetail setTotal(Double total) {
+        this.total = total;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "InvoiceDetail{" +
@@ -73,6 +83,7 @@ public class InvoiceDetail {
                 ", weight=" + weight +
                 ", measureUnit='" + measureUnit + '\'' +
                 ", unitPrice=" + unitPrice +
+                ", totalPrice=" + total +
                 ", product=" + product +
                 '}';
     }

@@ -25,7 +25,7 @@
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-spring-boot-starter</artifactId>
-			<version>12.0.0</version>
+			<version>7.0.1</version>
 		</dependency>
 
 		<!-- Test should stay disabled until they are implemented, otherwise an error is thrown at build time -->
@@ -40,7 +40,7 @@
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-java-tools</artifactId>
-			<version>12.0.1</version>
+			<version>6.0.2</version>
 		</dependency>
 
 		<!-- Extended Scalars for handling complex types such as Date -->

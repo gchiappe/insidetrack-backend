@@ -27,4 +27,5 @@ altair:
 graphql:
   tools:
     schema-location-pattern: 'schema/*.graphqls'
-#    initial-post-request-script: post-request.graphql
+  servlet:
+    mapping: /graphql
