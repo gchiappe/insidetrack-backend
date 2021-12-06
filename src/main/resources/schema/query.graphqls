@@ -11,9 +11,11 @@ type Query {
     invoicesByCustomerLocation(customerAddress: String): [Invoice]
     """Get all invoices by product code"""
     invoicesByProduct(productCode: String): [Invoice]
-
+    """Get all distributors"""
     distributors: [Distributor]
+    """Get all customers"""
     customers: [Customer]
+    """Get all products"""
     products: [Product]
 }
 
