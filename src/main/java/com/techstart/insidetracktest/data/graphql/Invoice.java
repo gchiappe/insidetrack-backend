@@ -28,7 +28,7 @@ public class Invoice {
     private @Field("purchase_date") LocalDate purchaseDate;
     private @Field("detail") List<InvoiceDetail> details;
     private @Field("total_purchases") Integer totalPurchases;
-    private @Field("total_payment") Integer totalPayment;
+    private @Field("total_payment") Double totalPayment;
     private @Field("customer") Customer customer;
     private @Field("distributor") Distributor distributor;
 
@@ -86,11 +86,11 @@ public class Invoice {
         return this;
     }
 
-    public Integer getTotalPayment() {
+    public Double getTotalPayment() {
         return totalPayment;
     }
 
-    public Invoice setTotalPayment(Integer totalPayment) {
+    public Invoice setTotalPayment(Double totalPayment) {
         this.totalPayment = totalPayment;
         return this;
     }
